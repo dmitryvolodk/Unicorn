@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--
+Name: Dmitry Volodkevich
+Date Created: 7/6/2020
+Most recent revision: 7/11/2020
+-->
+<html lang="en"> 
+    <head> 
+        <title>Dmitry Volodkevich's Portfolio</title>	
+		<link href="styles/main.css" rel="stylesheet" type="text/css" />
+		
+		<style>
+			caption {
+				font-weight: bold;
+				font-size: 1.2em;
+				margin-bottom: 8px;
+			}
+
+			table, th, td {
+				border: 1px solid #0d1f2d;
+				border-collapse: collapse;
+				padding: 5px 10px;
+			}
+
+			table {
+				width: 90%;
+				margin: auto;
+			}
+
+			tr {
+				height: 30px;
+			}
+
+			th {
+				background-color: #546a7b; 
+				color: #f2eded;
+			}
+
+			tbody tr:nth-child(odd) {
+				background-color: #e4c3ad; 
+			}
+			
+			article {
+				margin-bottom: 16px;
+			}
+			
+		</style>
+    </head> 
+    
+    <body>
+        <main> <!-- The main element contains all blocks on the page -->
+            <header> <!-- The header element contains only the main title at this point. -->
+                <h1>Portfolio for Dmitry Volodkevich</h1>
+            </header>
+
+            <nav> <!-- The nav element will include navigation buttons or links -->
+                <p><a href="projects.html">Projects</a></p>
+                <p><a href="contact.html">Contact Me</a></p>
+                <p><a href="testimonials.html">Testimonials</a></p>
+				<div class="clear-float"></div>
+            </nav>
+
+            <section> <!-- The section element contains the three chunks we are using to sell ourselves in this page. -->
+                <article id="about"> <!-- This is the first chunk inside the section element. -->
+					<h2><em>About Me</em></h2> 
+					<img src="images/dmitry-volodkevich-350px.jpg" alt="Portrait of Dmitry Volodkevich" width="250" />
+					<p>I am a software engineer with a very divers experience and interests. My primary hobby is computer science, which is my passion and a career base. My goal is to bring my diverse experience into the computer science career.</p> 
+					<p>My experience is primarily with the customer service, accounting, and finance professions. My work area is mostly in non-profit industry, which includes retail, housing, employment search and adaptation, disabled and elderlies help.</p> 
+					<div class="clear-float"></div>
+				</article>
+
+                <article id="experience"> <!-- This is the second chunk inside the section element. -->
+                    <h2><em>Past Experiences</em></h2> 
+                    <img src="images/dmitry-experience-640.jpg" alt="" width="250" />
+                    <div class="right-content">
+					<table> 
+                        <caption>Employment History</caption> 
+						<thead>
+							<tr><th>Years of Employment</th><th>Title</th>                         <th>Company</th></tr>
+						</thead>
+						<tbody>
+							<tr><td>2020-Present</td>       <td>Apprentice</td>                    <td>The Software Guild</td></tr>
+							<tr><td>2017-2020</td>          <td>Accountant</td>                    <td>CBES</td></tr>
+							<tr><td>2017-2017</td>          <td>Accountant</td>                    <td>Lionbridge</td></tr>
+							<tr><td>2016-2017</td>          <td>Accountant</td>                    <td>Five Corners Strategies</td></tr>
+							<tr><td>2015-2016</td>          <td>Accountant</td>                    <td>Caritas Communities</td></tr>
+							<tr><td>2014-2015</td>          <td>AR Specialist</td>                 <td>MMGI</td></tr>
+							<tr><td>2013-2014</td>          <td>Shift Supervisor</td>              <td>CVS Caremark Corporation</td></tr>
+							<tr><td>2010-2013</td>          <td>Student</td>                       <td>Salem State University</td></tr>
+						</tbody>
+                    </table>
+					</div>
+					<div class="clear-float"></div>
+                </article>
+
+                <article id="hobbies"> <!-- This is the third chunk inside the section element. -->
+                    <h2><em>Hobbies</em></h2>
+                    <img src="images/dmitry-hobby-640.jpg" alt="" width="250" />
+                    <div class="right-content">
+					<ul>
+						<li>Computer science</li>
+						<ol>
+							<li>Java</li>
+							<li>C++</li>
+							<li>Computer hardware</li>
+						</ol>
+						<li>Natural medicine</li>
+						<ol>
+							<li>Practical psychology</li>
+							<li>The science of sleep</li>
+							<li>The science of exercise</li>
+							<li>Dietology</li>
+						</ol>	
+					</ul>
+					<ul>
+						<li>Sports</li>
+						<ul>
+							<li>Soccer</li>
+							<li>Ping-pong</li>
+							<li>Basketball</li>
+						</ul>
+						<li>Outdoor Activities
+						<ul>
+							<li>Tennis</li>
+							<li>Cycling</li>
+							<li>Hiking</li>
+						</ul>
+					</ul>
+					</div>
+					<div class="clear-float"></div>
+                </article>
+            </section>
+
+            <footer> <!-- The footer is a block at the bottom of the page. -->
+                <p>&copy; 2020 Dmitry Volodkevich. All rights reserved.</p>
+            </footer>
+        </main>
+    </body> 
+</html>
