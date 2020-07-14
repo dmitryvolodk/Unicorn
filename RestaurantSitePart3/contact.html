@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--
+	Name: Dmitry Volodkevich
+	Date created: 07/10/2020
+	Most recent revision: 07/13/2020
+-->
+
+<!--↓ Bootstrap(1): Adding the basic HTML code that creates the main structure (html with lang, head, title, body  ↓-->
+<html lang="en">
+<!--↑ Bootstrap ↑-->
+	<head>
+		<script type="text/JavaScript" src="scripts/contact.js"></script>
+		<!--↓ Bootstrap(2): 1.)Unicode character set 2.)to look at the size of the user's window to apply Bootstrap's media queries ↓-->
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!--↑ Bootstrap ↑-->
+		
+		<title>Contact Us</title>
+		
+		<!--↓ Bootstrap(3): To link the required Bootstrap CSS file (nav buttons disalligned and header & footer became narrower ↓-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<!--↑ Bootstrap ↑-->
+		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+		
+		<style>
+			/*↓ Bootstrap(11): Styling to add borders and padding to the nav block. ↓*/
+			nav {
+				border-top: thin #5b7d87 solid;
+				border-bottom: thin #5b7d87 solid;
+				padding-top: 12px;
+				padding-bottom: 12px;
+			}    
+			/*↑ Bootstrap ↑*/
+		
+			/*↓ Bootstrap(13): Styling to add colors to nav buttons. ↓*/
+			nav .btn {
+				background-color: #5b7d87;
+				color: #fef9ff; 
+			}
+			/*↑ Bootstrap ↑*/
+	
+			/*↓ Bootstrap(14): Styling to make the text bold when the user hovers over the buttons. ↓*/
+			nav .btn:hover {
+				font-weight: bold;
+			}    
+			/*↑ Bootstrap ↑*/
+			
+			/*↓ Bootstrap(18): Styling to increase the size of the home button-link. ↓*/
+			nav svg {
+				font-size: 2.7em;
+			}    
+			/*↑ Bootstrap ↑*/
+			
+			.warning {
+				font-weight: bold;
+				color: black;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<!--↓ Bootstrap(5): Surrounding our HTML in a div with .container CSS class to use mobile-first responsive nature. ↓-->
+		<div class="container">
+		<!--↑ Bootstrap ↑-->
+		
+			<!--↓ Bootstrap(9): Adding Jumbotron, which a rectangle preformatted to stand out. ↓-->
+            <header class="jumbotron" style="background-color: steelblue;">
+                <h1 class="text-center">American Taste</h1>
+            </header>
+			<!--↑ Bootstrap ↑-->
+			
+			<!--↓ Bootstrap(10): Adding links to apply later Bootstrap to them. ↓-->
+            <nav>
+			<!--↑ Bootstrap ↑-->
+				
+				<!-- Bootstrap(17): Adding a Boostrap icon as a home button link (open sourced (MIT) web-site: https://icons.getbootstrap.com/icons/house-fill/) -->
+				<a href="index.html"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+					<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+				</svg></a>
+				<!--↑ Bootstrap ↑-->
+				
+				<!--↓ Bootstrap(12): Adding class="btn" for the link to look like a button ↓-->
+				<a class="btn badge-pill" href="menu.html">Menu</a><!-- Bootstrap(15): Adding 1st hyperlinks after checked that the hover effect is working. -->
+                <a class="btn badge-pill" href="contact.html">Contact Us</a><!-- Bootstrap(16): Adding pill effect for the buttons to look less rectangular -->
+				<!--↑ Bootstrap ↑-->
+			</nav>
+			
+		<!--↓ Bootstrap(6): Creating form ↓-->
+		<!--↓ Bootstrap(6): Creating form ↓-->
+			
+		<!--↓ Bootstrap(6): Creating form - textboxes ↓-->
+<form name="contactFun" onsubmit="return validateItems();">
+  <div class="form-group row">
+    <label for="inputName" class="col-sm-2 col-form-label warning">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputName"  placeholder="Name">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputEmail" class="col-sm-2 col-form-label warning">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPhone" class="col-sm-2 col-form-label warning">Phone</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputPhone" placeholder="Pnone">
+    </div>
+  </div>
+  
+		<!--↓ Bootstrap(6): Creating form - select menu ↓-->
+  
+  
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="selectChoice">Reason for Inquiry</label>
+    <div class="col-sm-10">
+      <select class="custom-select" id="selectChoice">
+        <option selected>Catering</option>
+        <option value="1">Private Party</option>
+        <option value="2">Feedback</option>
+        <option value="3">Other</option>
+      </select>
+	</div>
+  </div>
+  
+  
+		<!--↓ Bootstrap(6): Creating form - textArea ↓-->
+	<div class="form-group row">
+		<label for="info" class="col-sm-2 col-form-label">Additional Information</label>
+		<div class="col-sm-10">
+			<textarea class="form-control" id="info" rows="3"></textarea>
+		</div>  
+	</div>  
+  
+  
+		<!--↓ Bootstrap(6): Creating form - radiobuttons ↓-->
+  <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-2 pt-0">Have you been to the restaurant?</legend>
+      <div class="col-sm-10">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+          <label class="form-check-label" for="gridRadios1">No</label>
+        </div>
+		
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+          <label class="form-check-label" for="gridRadios2">Yes</label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  
+		<!--↓ Bootstrap(6): Creating form - checkboxes ↓-->
+  <div class="form-group row">
+    <div class="col-sm-2">Best days to contact you:</div>
+    <div class="col-sm-10">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="gridCheck1">
+        <label class="form-check-label" for="gridCheck1">M</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="gridCheck1">
+        <label class="form-check-label" for="gridCheck1">T</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="gridCheck1">
+        <label class="form-check-label" for="gridCheck1">W</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="gridCheck1">
+        <label class="form-check-label" for="gridCheck1">Th</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="gridCheck1">
+        <label class="form-check-label" for="gridCheck1">F</label>
+      </div>
+    </div>
+  </div>
+  
+		<!--↓ Bootstrap(6): Creating form- submitt button ↓-->
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">Send Request</button>
+    </div>
+  </div>
+</form>			
+
+		<!--↑ Bootstrap(6): Creating form ↑-->
+		<!--↑ Bootstrap(6): Creating form ↑-->
+
+		</div>
+			
+			
+			
+		<!--↓ Bootstrap(4): Including the files required for the JavaScript content to work. ↓-->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>			
+		<!--↑ Bootstrap ↑-->
+		
+			<footer class="jumbotron" style="background-color: steelblue;">
+				<p class="text-center">105 Atlantic Ave, Boston, MA 02111<br />1(617)365-6321</p>
+			</footer>
+	</body>
+</html>
