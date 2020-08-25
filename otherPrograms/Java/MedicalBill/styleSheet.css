@@ -1,0 +1,13 @@
+/* To set up a background image for the UI */
+.content{
+-fx-background-image: url("medical.jpg");
+-fx-background-size: 100% 100%;
+    /* others properties */
+}
+
+/* To set up color for the "reset" and "calculate" buttons */
+.button { 
+   -fx-background-color: green; 
+   -fx-text-fill: white; 
+}
+ 

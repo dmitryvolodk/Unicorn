@@ -1,0 +1,57 @@
+ Welcome to VIVO HealthCare!
+ Please fill out the following form in oder for us to better assist you!
+Please enter your medical reccord number:  123355456
+Patient's First name:  Dmitru
+Patient's last name:  Volodkevich
+ Patient's Date of Birth:  10021982
+Visit coverage:  BCBS
+ Member Id number:  123654
+ Group number:  523654
+ Claim Address:  106 Alstead St, Apt 6, Quincy, MA
+Start Date: 04012020
+What is patient relationship to the subscriber?     1-Self/2-Child/3-Spouse1
+ Patient is the subscriber
+null
+Please answer the following assessment questions to help the doctor with the visit. 
+
+Activities of Daily Living:
+In the past 7 days, did you need help from others to perform everyday activities such as eating, getting dressed, grooming, bathing, walking, or using the toilet? No/Yes
+No
+
+Instrumental Activities of Daily Living:
+In the past 7 days, did you need help from others to take care of things such as laundry and housekeeping, banking, shopping, using the telephone, food preparation, transportation, or taking your own medications? No/Yes
+No
+
+ALCOHOL USE:
+MEN UNDER 65 ONLY: How many times in the past year have you had 5 or more drinks in a day? on the scale 0-5
+0
+ALL OTHERS: How many times in the past year have you had 4 or more drinks in a day? on the scale 0-5
+
+
+ANXIETY:
+a. Over the past 2 weeks, how often have you felt nervous, anxious, or on edge? Not all-0 / Several days-1 / More days than not-2 / Nearly every day-3
+0
+b. Over the past 2 weeks, how often were you not able to stop worrying or control your worrying? Not all-0 / Several days-1 / More days than not-2 / Nearly every day-3
+0
+
+DEPRESSION:
+a. Over the past 2 weeks, how often have you felt down, depressed, or hopeless? Not all-0 / Several days-1 / More days than not-2 / Nearly every day-3
+0
+b. Over the past 2 weeks, how often have you felt little interest or pleasure in doing things? Not all-0 / Several days-1 / More days than not-2 / Nearly every day-3
+0
+
+GENERAL HEALTH:
+In general, would you say your health is? Excellent-1 / Very good-2 / Good-3 / Fair-4 / Poor-5
+1
+How would you describe the condition of your mouth and teeth, including false teeth or dentures? Excellent-1 / Very good-2 / Good-3 / Fair-4 / Poor-5
+2
+Have you suffered a personal loss or misfortune in the last year? (For example: a job loss, disability, divorce, separation, jail term, or the death of someone close to you.) No-1 / Yes, one serious loss-2 / Yes, tow or more serious losses-3
+1
+
+MEDICATION ADHERENCE:
+How often do you have trouble taking medicines the way you have been told to take them? 
+ I do not have to take medicine-1 
+I always take them as prescribed-2 
+Sometimes I take them as prescribed-3 
+ I seldom take them as prescribed-4
+1

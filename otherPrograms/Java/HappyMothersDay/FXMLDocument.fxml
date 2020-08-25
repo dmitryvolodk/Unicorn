@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="226.0" prefWidth="387.0" styleClass="content" stylesheets="@momStyleSheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLDocumentController">
+    <children>
+        <Button fx:id="button" layoutX="161.0" layoutY="88.0" onAction="#handleButtonAction" text="Click Me!" />
+        <Label fx:id="label" layoutX="5.0" layoutY="147.0" minHeight="16" minWidth="69" prefHeight="65.0" prefWidth="378.0" textAlignment="CENTER" textFill="#f20a0a" textOverrun="LEADING_WORD_ELLIPSIS">
+         <font>
+            <Font name="Brush Script MT Italic" size="48.0" />
+         </font></Label>
+    </children>
+</AnchorPane>

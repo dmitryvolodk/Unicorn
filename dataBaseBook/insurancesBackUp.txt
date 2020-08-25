@@ -1,0 +1,62 @@
+create table BCBS (
+  medicalService varchar(40),
+  copay$ integer,
+  primary key (medicalService)
+);
+
+create table BMC (
+  medicalService varchar(40),
+  copay$ integer,
+  primary key (medicalService)
+);
+
+create table Connecticare (
+  medicalService varchar(40),
+  copay$ integer,
+  primary key (medicalService)
+);
+
+create table Fallon (
+  medicalService varchar(40),
+  copay$ integer,
+  primary key (medicalService)
+);
+
+create table HarvardPilgrim (
+  medicalService varchar(40),
+  copay$ integer,
+  primary key (medicalService)
+);
+
+create table HealthNewEngland (
+  medicalService varchar(40),
+  copay$ integer,
+  primary key (medicalService)
+);
+
+create table Medicare (
+  medicalService varchar(40),
+  copay$ integer,
+  primary key (medicalService)
+);
+
+create table NeighborhoodHealthPlan (
+  medicalService varchar(40),
+  copay$ integer,
+  primary key (medicalService)
+);
+
+create table Tufts (
+  medicalService varchar(40),
+  copay$ integer,
+  primary key (medicalService)
+);
+
+create table UnitedHealthCare (
+  medicalService varchar(40),
+  copay$ integer,
+  primary key (medicalService)
+);
+
+
+

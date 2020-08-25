@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane cacheShape="false" centerShape="false" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="898.0" prefWidth="956.0" scaleShape="false" styleClass="content" stylesheets="@styleSheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLDocumentController">
+    
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="398.0" minWidth="0.0" prefWidth="0.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="340.0" minWidth="10.0" prefWidth="211.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.0" minWidth="0.0" prefWidth="40.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="398.0" minWidth="0.0" prefWidth="0.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="398.0" minWidth="10.0" prefWidth="190.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="396.0" minWidth="10.0" prefWidth="40.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="398.0" minWidth="0.0" prefWidth="0.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="199.0" minHeight="10.0" prefHeight="199.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="50.0" minHeight="-Infinity" prefHeight="36.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label alignment="CENTER" prefHeight="26.0" prefWidth="300.0" text="Select Insurance" textFill="#1661a6" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" prefHeight="25.0" prefWidth="299.0" text="Select Medical Service(s)" textFill="#1c4aa4" GridPane.columnIndex="4" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <CheckBox mnemonicParsing="false" onAction="#primaryCareCheckBoxAction" prefHeight="14.0" prefWidth="305.0" text="Primary care visit for illness" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <RadioButton mnemonicParsing="false" onAction="#BCBSRadioButtonAction" text="Blue Cross Blue Shield" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <toggleGroup>
+            <ToggleGroup fx:id="ToggleGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton mnemonicParsing="false" onAction="#BMCRadioButtonAction" text="Boston Medical Center" toggleGroup="$ToggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <RadioButton mnemonicParsing="false" onAction="#ConnecticareRadioButtonAction" text="Connecticare" toggleGroup="$ToggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <RadioButton mnemonicParsing="false" onAction="#FallonRadioButtonAction" text="Fallon" toggleGroup="$ToggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <RadioButton mnemonicParsing="false" onAction="#HarvardPilgrimRadioButtonAction" text="Harvard Pilgrim" toggleGroup="$ToggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <RadioButton mnemonicParsing="false" onAction="#HealthNewEnglandRadioButtonAction" text="Health New England" toggleGroup="$ToggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <RadioButton mnemonicParsing="false" onAction="#MedicareRadioButtonAction" text="Medicare" toggleGroup="$ToggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+      <RadioButton mnemonicParsing="false" onAction="#NeighborhoodHealthPlanRadioButtonAction" text="Neighborhood Health Plan" toggleGroup="$ToggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+      <RadioButton mnemonicParsing="false" onAction="#TuftsRadioButtonAction" text="Tufts" toggleGroup="$ToggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+      <RadioButton mnemonicParsing="false" onAction="#UnitedHealthCareRadioButtonAction" text="United Health Care" toggleGroup="$ToggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+      <CheckBox mnemonicParsing="false" onAction="#SpecialistCheckBoxAction" text="Specialist visit" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+      <CheckBox mnemonicParsing="false" onAction="#ImagingCheckBoxAction" text="Imaging - CT/PET scans, MRIs" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+      <CheckBox mnemonicParsing="false" onAction="#GenericDrugsCheckBoxAction" text="Generic drugs" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+      <CheckBox mnemonicParsing="false" onAction="#PreferredDrugsCheckBoxAction" text="Preferred brand drugs" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+      <CheckBox mnemonicParsing="false" onAction="#NonPreferredDrugsCheckBoxAction" text="Non-preferred brand drugs" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+      <CheckBox mnemonicParsing="false" onAction="#OutpatientSurgeryCheckBoxAction" text="Outpatient surgery facility fee" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+      <CheckBox mnemonicParsing="false" onAction="#EmergencyCheckBoxAction" text="Emergency room care" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+      <CheckBox mnemonicParsing="false" onAction="#UrgentCheckBoxAction" text="Urgent care" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+      <CheckBox mnemonicParsing="false" onAction="#HospitalFacilityCheckBoxAction" text="Hospital stay facility fee" GridPane.columnIndex="4" GridPane.rowIndex="11" />
+      <CheckBox mnemonicParsing="false" onAction="#BehavioralOutpatientCheckBoxAction" text="Behavioral health outpatient services" GridPane.columnIndex="4" GridPane.rowIndex="12" />
+      <CheckBox mnemonicParsing="false" onAction="#BehavioralInpatientCheckBoxAction" text="Behavioral health inpatient services" GridPane.columnIndex="4" GridPane.rowIndex="13" />
+      <CheckBox mnemonicParsing="false" onAction="#ChildbirthCheckBoxAction" text="Childbirth/delivery facility services" GridPane.columnIndex="4" GridPane.rowIndex="14" />
+      <CheckBox mnemonicParsing="false" onAction="#RehabilitationCheckBoxAction" text="Rehabilitation services" GridPane.columnIndex="4" GridPane.rowIndex="15" />
+      <CheckBox mnemonicParsing="false" onAction="#HabilitationCheckBoxAction" text="Habilitation services" GridPane.columnIndex="4" GridPane.rowIndex="16" />
+      <Label fx:id="lbTOTAL" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="301.0" text="TOTAL:" textFill="#4957eb" GridPane.columnIndex="1" GridPane.rowIndex="19">
+         <font>
+            <Font name="Bell MT Italic" size="21.0" />
+         </font></Label>
+      <Button mnemonicParsing="false" onAction="#calculateBillButtonAction" text="Calculate total bill" textFill="#0c0680" GridPane.columnIndex="4" GridPane.rowIndex="18">
+         <font>
+            <Font name="Baskerville Old Face" size="20.0" />
+         </font></Button>
+      <Label fx:id="lbDiscount" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="267.0" text="Discount 10% over $150:" textFill="#41993d" GridPane.columnIndex="1" GridPane.rowIndex="18">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label fx:id="lbDiscountAmt" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="69.0" text="0.0" GridPane.columnIndex="2" GridPane.rowIndex="18" />
+      <Label fx:id="lbSubtotal" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="266.0" text="Subtotal:" GridPane.columnIndex="1" GridPane.rowIndex="17" />
+      <Label fx:id="lbSubtotalAmt" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="70.0" text="0.0" GridPane.columnIndex="2" GridPane.rowIndex="17" />
+      <Label fx:id="lbResult" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="70.0" text="0.0" GridPane.columnIndex="2" GridPane.rowIndex="19" />
+      <Label fx:id="lbPrimaryCare" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="112.0" text="0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+      <Label fx:id="lbSpecialist" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="112.0" text="0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+      <Label fx:id="lbImaging" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="112.0" text="0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+      <Label fx:id="lbGenericDrugs" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="112.0" text="0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+      <Label fx:id="lbPreferredDrugs" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="112.0" text="0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+      <Label fx:id="lbNonPreferredDrugs" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="112.0" text="0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+      <Label fx:id="lbOutpatientSurgery" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="112.0" text="0" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+      <Label fx:id="lbEmergency" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="112.0" text="0" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+      <Label fx:id="lbUrgent" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="112.0" text="0" GridPane.columnIndex="5" GridPane.rowIndex="10" />
+      <Label fx:id="lbHospitalFacility" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="112.0" text="0" GridPane.columnIndex="5" GridPane.rowIndex="11" />
+      <Label fx:id="lbBehavioralOutpatient" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="112.0" text="0" GridPane.columnIndex="5" GridPane.rowIndex="12" />
+      <Label fx:id="lbBehavioralInpatient" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="112.0" text="0" GridPane.columnIndex="5" GridPane.rowIndex="13" />
+      <Label fx:id="lbChildbirth" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="112.0" text="0" GridPane.columnIndex="5" GridPane.rowIndex="14" />
+      <Label fx:id="lbRehabilitation" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="112.0" text="0" GridPane.columnIndex="5" GridPane.rowIndex="15" />
+      <Label fx:id="lbHabilitation" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="112.0" text="0" GridPane.columnIndex="5" GridPane.rowIndex="16" />
+      <Button mnemonicParsing="false" onAction="#resetButtonAction" text="Reset calculation" textFill="#724040" GridPane.columnIndex="4" GridPane.rowIndex="19">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <ImageView fitHeight="198.0" fitWidth="257.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+         <image>
+            <Image url="@SmallerLogo.JPG" />
+         </image>
+      </ImageView>
+      <Label prefHeight="17.0" prefWidth="129.0" text="Out of Pocket" textFill="#234ea1" GridPane.columnIndex="5" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+   <effect>
+      <ColorAdjust />
+   </effect>
+</GridPane>

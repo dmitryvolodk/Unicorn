@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="412.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BMIController">
+<children>
+    
+<!-- to place the button for the user to click to calculate the BMI  -->   
+<Button fx:id="button" layoutX="155.0" layoutY="272.0" onAction="#handleButtonAction" text="Calculate" wrapText="true" />
+
+<!-- to creat a label GUI for teh user to display the number value of the calculated BMI  -->   
+<Label fx:id="label" alignment="CENTER" layoutX="115.0" layoutY="365.0" minHeight="16" minWidth="69" prefHeight="64.0" prefWidth="180.0" text="0.0">
+<font>
+<Font name="System Bold Italic" size="24.0" />
+</font></Label>
+
+<!-- to display the word value of teh user's BMI  -->   
+<Label fx:id="label1" alignment="CENTER" layoutX="115.0" layoutY="397.0" minHeight="16" minWidth="69" prefHeight="64.0" prefWidth="180.0" text="0.0">
+<font>
+<Font name="System Bold Italic" size="24.0" />
+</font></Label>
+
+<!-- to display the textfields to enter weight and height  -->   
+<TextField fx:id="weight" layoutX="110.0" layoutY="145.0" />
+<TextField fx:id="height" layoutX="110.0" layoutY="213.0" />
+
+<!-- to place the radio-button for the user to choose the U.S. units of mesurement  -->   
+<RadioButton fx:id="pi" layoutX="115.0" layoutY="46.0" mnemonicParsing="false" selected="true" text="U.S. Units">
+<toggleGroup>
+<ToggleGroup fx:id="ip" />
+</toggleGroup>
+</RadioButton>
+
+<!-- to place the radio-button for the user to choose the Metric units of mesurement  -->   
+<RadioButton fx:id="km" layoutX="115.0" layoutY="94.0" mnemonicParsing="false" text="Metric Units" toggleGroup="$ip" />
+
+<!-- to place the headings for Weight and Height textfields  -->   
+<Label layoutX="36.0" layoutY="150.0" text="Weight:" />
+<Label layoutX="38.0" layoutY="218.0" text="Height:" />
+
+<!-- to prompt the user about the result of the BMI calculation  -->   
+<Label layoutX="147.0" layoutY="325.0" prefHeight="50.0" prefWidth="152.0" text="Your BMI is:">
+<font>
+<Font size="24.0" />
+</font>
+</Label>
+</children>
+</AnchorPane>

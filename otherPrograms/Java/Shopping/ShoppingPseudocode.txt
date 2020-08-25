@@ -1,0 +1,18 @@
+1. Prompt the user for the item names (check for duplicates), priorities, prices.
+
+2. Display the number of items on the shopping list.
+
+3. List the items before sorting by the priority.
+
+4. Get the total price fo all items ont he shopping list.
+
+5. Sorting the shopping list of item objects by the priority.
+
+6. Display the shopping list after sorting.
+
+7. Make the purchase of items by substructing each purchased 
+	item's price from available total money.
+
+8. Display the number of purchased items and remaning purchase money.
+
+9. Display purchased and not purchased items with their prices.
