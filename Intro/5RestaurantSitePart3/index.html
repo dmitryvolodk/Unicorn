@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--
+	Name: Dmitry Volodkevich
+	Date created: 07/10/2020
+	Most recent revision: 07/13/2020
+-->
+
+<!--↓ Bootstrap(1): Adding the basic HTML code that creates the main structure (html with lang, head, title, body  ↓-->
+<html lang="en">
+<!--↑ Bootstrap ↑-->
+	<head>
+		<!--↓ Bootstrap(2): 1.)Unicode character set 2.)to look at the size of the user's window to apply Bootstrap's media queries ↓-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!--↑ Bootstrap ↑-->
+		
+		<title>Home Page</title>
+		
+		<!--↓ Bootstrap(3): To link the required Bootstrap CSS file (nav buttons disalligned and header & footer became narrower ↓-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+		<!--↑ Bootstrap ↑-->
+		
+		<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+		
+		<style>
+			/*↓ Bootstrap(11): Styling to add borders and padding to the nav block. ↓*/
+			nav {
+				border-top: thin #5b7d87 solid;
+				border-bottom: thin #5b7d87 solid;
+				padding-top: 12px;
+				padding-bottom: 12px;
+			}    
+			/*↑ Bootstrap ↑*/
+		
+			/*↓ Bootstrap(13): Styling to add colors to nav buttons. ↓*/
+			nav .btn {
+				background-color: #5b7d87;
+				color: #fef9ff; 
+			}
+			/*↑ Bootstrap ↑*/
+	
+			/*↓ Bootstrap(14): Styling to make the text bold when the user hovers over the buttons. ↓*/
+			nav .btn:hover {
+				font-weight: bold;
+			}    
+			/*↑ Bootstrap ↑*/
+			
+			/*↓ Bootstrap(18): Styling to increase the size of the home button-link. ↓*/
+			nav svg {
+				font-size: 2.7em;
+			}    
+			/*↑ Bootstrap ↑*/
+			
+			/*↓ Bootstrap(20): Layout of the paragraph. ↓*/
+			div p {
+				text-align: justify;
+			}    
+			/*↑ Bootstrap ↑*/
+			
+			.center-block {
+				display: block;
+				margin-right: auto;
+				margin-left: auto;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<!--↓ Bootstrap(5): Surrounding our HTML in a div with .container CSS class to use mobile-first responsive nature. ↓-->
+        <div class="container">
+		<!--↑ Bootstrap ↑-->
+
+			<!--↓ Bootstrap(9): Adding Jumbotron, which a rectangle preformatted to stand out. ↓-->
+            <header class="jumbotron" style="background-color: steelblue;">
+                <h1>American Taste</h1>
+                <h2 class="font-italic">Unique and delicious tatse</h2><!-- Bootstrap font class to italicize text. -->
+                <h3 class="text-right mt-5">Our restaurant is opening a new location!</h3><!-- 1)Aligning text right 2) Creating a top margin to add spacing between this line and the line above it. -->
+            </header>
+			<!--↑ Bootstrap ↑-->
+			<!--↓ Bootstrap(10): Adding links to apply later Bootstrap to them. ↓-->
+            <nav>
+			<!--↑ Bootstrap ↑-->
+				
+				<!-- Bootstrap(17): Adding a Boostrap icon as a home button link (open sourced (MIT) web-site: https://icons.getbootstrap.com/icons/house-fill/) -->
+				<a href="index.html"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+					<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+				</svg></a>
+				<!--↑ Bootstrap ↑-->
+				
+				<!--↓ Bootstrap(12): Adding class="btn" for the link to look like a button ↓-->
+				<a class="btn badge-pill" href="menu.html">Menu</a><!-- Bootstrap(15): Adding 1st hyperlinks after checked that the hover effect is working. -->
+                <a class="btn badge-pill" href="contact.html">Contact Us</a><!-- Bootstrap(16): Adding pill effect for the buttons to look less rectangular -->
+				<!--↑ Bootstrap ↑-->
+			</nav>
+			
+			
+		<!--↓ Bootstrap(6): Creating div that deines the row for the logo image.(Since we don't need two separate content blocks here - we don't put two in its own div - we only need one colomn) ↓-->
+            <div class="row">
+		<!--↑ Bootstrap ↑-->
+				<!--↓ Bootstrap(7): Putting an image in its own column, wich is taking half of the screen, according to the wireframe. It's 12*(2/4)=6 columns for large display. ↓-->
+				<div class="col-lg-4 text-center center-block">
+				<!--↑ Bootstrap ↑-->
+				<!--↓ Bootstrap(8): Adding the content do div (adding picture at the moment) ↓-->
+					<img src="images/american-taste-logo-400px.jpg" alt="Logo of American Taste" class="img-fluid" />
+				<!--↑ Bootstrap ↑-->
+				</div>
+			</div>
+			
+			<!--↓ Bootstrap(19): Creating div for text ↓-->
+            <div class="row">
+			<!--↑ Bootstrap ↑-->
+				<div class="col-lg-4 text-jastify center-block">
+					<p>Restaurant Description<br />American Taste is in the heart of Boston - in the seaport area. It serves food with the unique taste. The high quality and fresh ingredients for the menu are accuratelly picked by our chefs every day. The location of the restaurant allows the customers to have a very beautiful window view to the ocean. Our first-time customers receive a courtesy discount of 50% during the first visit. Welcome to American Taste!</p>
+				</div>
+			</div>
+			
+			<!--↓ Bootstrap(22): Creating div row for the carousel block ↓-->
+            <div class="row">
+			<!--↑ Bootstrap ↑-->
+				<div class="col-lg-12">
+				<!--↓ Bootstrap(21): Creating div carousel ↓-->
+				<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+					<img class="d-block w-100" src="images/newLocation.jpg" alt="First slide">
+					</div>
+					<div class="carousel-item">
+					<img class="d-block w-100" src="images/seasonalMenu.jpg" alt="Second slide">
+					</div>
+					<div class="carousel-item">
+					<img class="d-block w-100" src="images/specialBrew.jpg" alt="Third slide">
+					</div>
+				</div>
+				</div>			
+				<!--↑ Bootstrap ↑-->
+				</div>			
+			</div>
+			
+		</div>
+			
+		<!--↓ Bootstrap(4): Including the files required for the JavaScript content to work. ↓-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<!--↑ Bootstrap ↑-->
+		
+		<!--↓ Bootstrap(4): Including the files required for the JavaScript content to work. ↓-->
+			<noscript>
+				Your JavaScript is disabled. This site is best viewed with JavaScript!
+			</noscript>
+			
+			<footer class="jumbotron" style="background-color: steelblue;">
+				<p class="text-center">105 Atlantic Ave, Boston, MA 02111<br />1(617)365-6321</p>
+			</footer>
+	</body>
+</html>
