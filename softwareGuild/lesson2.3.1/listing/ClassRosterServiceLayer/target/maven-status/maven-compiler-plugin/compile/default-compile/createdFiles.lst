@@ -1,0 +1,15 @@
+com\sg\classrosterservicelayer\dao\ClassRosterDao.class
+com\sg\classrosterservicelayer\controller\ClassRosterController.class
+com\sg\classrosterservicelayer\ui\UserIOConsoleImpl.class
+com\sg\classrosterservicelayer\dao\ClassRosterDaoFileImpl.class
+com\sg\classrosterservicelayer\dao\ClassRosterAuditDaoFileImpl.class
+com\sg\classrosterservicelayer\ui\UserIO.class
+com\sg\classrosterservicelayer\service\ClassRosterServiceLayerImpl.class
+com\sg\classrosterservicelayer\service\ClassRosterServiceLayer.class
+com\sg\classrosterservicelayer\dao\ClassRosterAuditDao.class
+com\sg\classrosterservicelayer\ui\ClassRosterView.class
+com\sg\classrosterservicelayer\service\ClassRosterDataValidationException.class
+com\sg\classrosterservicelayer\service\ClassRosterDuplicateIdException.class
+com\sg\classrosterservicelayer\dao\ClassRosterPersistenceException.class
+com\sg\classrosterservicelayer\dto\Student.class
+com\sg\classrosterservicelayer\App.class

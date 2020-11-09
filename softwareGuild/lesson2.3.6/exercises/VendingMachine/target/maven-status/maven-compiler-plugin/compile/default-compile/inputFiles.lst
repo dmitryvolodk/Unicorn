@@ -1,0 +1,17 @@
+C:\book\softwareGuild\lesson2.3.6\exercises\VendingMachine\src\main\java\com\sg\vendingmachine\service\VendingMachineServiceLayerImpl.java
+C:\book\softwareGuild\lesson2.3.6\exercises\VendingMachine\src\main\java\com\sg\vendingmachine\dao\VendingMachinePersistenceException.java
+C:\book\softwareGuild\lesson2.3.6\exercises\VendingMachine\src\main\java\com\sg\vendingmachine\App.java
+C:\book\softwareGuild\lesson2.3.6\exercises\VendingMachine\src\main\java\com\sg\vendingmachine\dto\Item.java
+C:\book\softwareGuild\lesson2.3.6\exercises\VendingMachine\src\main\java\com\sg\vendingmachine\service\VendingMachineInsufficientFundsException.java
+C:\book\softwareGuild\lesson2.3.6\exercises\VendingMachine\src\main\java\com\sg\vendingmachine\service\VendingMachineNoItemInventoryException.java
+C:\book\softwareGuild\lesson2.3.6\exercises\VendingMachine\src\main\java\com\sg\vendingmachine\ui\VendingMachineView.java
+C:\book\softwareGuild\lesson2.3.6\exercises\VendingMachine\src\main\java\com\sg\vendingmachine\dto\CoinsValues.java
+C:\book\softwareGuild\lesson2.3.6\exercises\VendingMachine\src\main\java\com\sg\vendingmachine\ui\UserIO.java
+C:\book\softwareGuild\lesson2.3.6\exercises\VendingMachine\src\main\java\com\sg\vendingmachine\dto\Change.java
+C:\book\softwareGuild\lesson2.3.6\exercises\VendingMachine\src\main\java\com\sg\vendingmachine\controller\VendingMachineController.java
+C:\book\softwareGuild\lesson2.3.6\exercises\VendingMachine\src\main\java\com\sg\vendingmachine\ui\UserIOConsoleImpl.java
+C:\book\softwareGuild\lesson2.3.6\exercises\VendingMachine\src\main\java\com\sg\vendingmachine\dao\VendingMachineDao.java
+C:\book\softwareGuild\lesson2.3.6\exercises\VendingMachine\src\main\java\com\sg\vendingmachine\dao\VendingMachineDaoFileImpl.java
+C:\book\softwareGuild\lesson2.3.6\exercises\VendingMachine\src\main\java\com\sg\vendingmachine\dao\VendingMachineAuditDao.java
+C:\book\softwareGuild\lesson2.3.6\exercises\VendingMachine\src\main\java\com\sg\vendingmachine\dao\VendingMachineAuditDaoFileImpl.java
+C:\book\softwareGuild\lesson2.3.6\exercises\VendingMachine\src\main\java\com\sg\vendingmachine\service\VendingMachineServiceLayer.java

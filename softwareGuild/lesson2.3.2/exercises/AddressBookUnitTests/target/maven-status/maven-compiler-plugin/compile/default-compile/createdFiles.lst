@@ -1,0 +1,9 @@
+com\sg\addressbookunittests\ui\AddressBookView.class
+com\sg\addressbookunittests\dto\Address.class
+com\sg\addressbookunittests\dao\AddressBookDaoException.class
+com\sg\addressbookunittests\ui\UserIOConsoleImpl.class
+com\sg\addressbookunittests\dao\AddressBookDao.class
+com\sg\addressbookunittests\ui\UserIO.class
+com\sg\addressbookunittests\App.class
+com\sg\addressbookunittests\controller\AddressBookController.class
+com\sg\addressbookunittests\dao\AddressBookDaoFileImpl.class

@@ -1,0 +1,4 @@
+com\sg\monsterousdaotesting\dao\MonsterDao.class
+com\sg\monsterousdaotesting\dao\implementations\AGoodMonsterDao.class
+com\sg\monsterousdaotesting\model\Monster.class
+com\sg\monsterousdaotesting\model\MonsterType.class

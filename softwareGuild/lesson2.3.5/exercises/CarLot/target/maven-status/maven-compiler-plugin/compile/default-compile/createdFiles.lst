@@ -1,0 +1,8 @@
+com\sg\carlot\dto\Car.class
+com\sg\carlot\ui\UserIO.class
+com\sg\carlot\controller\CarLotController.class
+com\sg\carlot\dao\CarLotDao.class
+com\sg\carlot\ui\CarLotView.class
+com\sg\carlot\ui\UserIOConsoleImpl.class
+com\sg\carlot\dao\CarLotDaoFileImpl.class
+com\sg\carlot\App.class

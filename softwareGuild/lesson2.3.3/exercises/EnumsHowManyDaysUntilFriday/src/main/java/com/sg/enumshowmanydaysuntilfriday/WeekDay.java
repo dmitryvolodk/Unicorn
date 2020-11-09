@@ -1,0 +1,5 @@
+package com.sg.enumshowmanydaysuntilfriday;
+
+public enum WeekDay {
+    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+}
