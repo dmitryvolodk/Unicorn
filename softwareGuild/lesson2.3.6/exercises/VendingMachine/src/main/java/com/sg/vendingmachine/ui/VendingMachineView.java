@@ -3,10 +3,7 @@ package com.sg.vendingmachine.ui;
 import com.sg.vendingmachine.dto.Change;
 import com.sg.vendingmachine.dto.Item;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
-import java.util.Map;
 
 public class VendingMachineView {
 

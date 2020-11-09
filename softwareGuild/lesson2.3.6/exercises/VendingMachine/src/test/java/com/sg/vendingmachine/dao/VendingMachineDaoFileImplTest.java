@@ -1,10 +1,7 @@
 package com.sg.vendingmachine.dao;
 
 import com.sg.vendingmachine.dto.Item;
-import java.io.FileWriter;
-import java.math.BigDecimal;
 import java.util.List;
-import java.util.Map;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
