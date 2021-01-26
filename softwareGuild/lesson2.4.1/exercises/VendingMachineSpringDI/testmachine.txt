@@ -1,0 +1,5 @@
+Snickers Bar::1::1.89
+Clif Bar::1::1.89
+Sun Chips::1::1.68
+Granola Bar::5::1.19
+Mars Bar::5::2.01
