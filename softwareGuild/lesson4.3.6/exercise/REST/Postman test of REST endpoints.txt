@@ -1,0 +1,104 @@
+1.) Endpoint Get All:
+
+HTTP Method: GET
+URL: https://tsg-contactlist.herokuapp.com/contacts
+Request Body: None
+Response Body: JSON array of all the contacts from the service
+
+Test results:
+
+Status response: 200 OK
+
+Response body: 9 JSON array elements with the data including first and last names.
+
+2.) Endpoint Get One:
+
+HTTP Method: GET
+URL: https://tsg-contactlist.herokuapp.com/contact/9
+Request Body: None
+Response Body: JSON array of the data corresponding to the submitted id number
+
+Test results:
+
+Status response: 200 OK
+
+Response body: 1 JSON array element with the data including first and last names and contactId = 9.
+
+ "contactId": 9,
+ "firstName": "Louise",
+ "lastName": "Banks",
+ "company": "Circle Of Life LLC",
+ "phone": "123-4567",
+ "email": "lbanks@itsfullofstars.com"
+
+3.) Endpoint Create One:
+
+HTTP Method: POST
+URL: https://tsg-contactlist.herokuapp.com/contact
+Request Body: JSON string containing the Contact data
+Response Body: JSON string containing all of the original Contact data plus the contactId that the web service assigned to the newly created Contact
+
+Test results:
+
+Status response: 200 OK
+
+Response body: 
+
+{
+    "contactId": 1338,
+    "firstName": "Albert",
+    "lastName": "Einstein",
+    "company": "Scientist",
+    "phone": "103-4269",
+    "email": "aeinstein@genius.org"
+}
+
+4.) Endpoint Update a Contact:
+
+HTTP Method: PUT
+URL: https://tsg-contactlist.herokuapp.com/contact/[id]
+Request Body: JSON string containing the Contact data
+Response Body: None
+
+Request Body:
+
+{
+    "firstName": "Albert",
+    "lastName": "Einstein",
+    "company": "Scientist",
+    "phone": "999-9999",
+    "email": "aeinstein@genius.org"
+}
+
+Test results:
+
+Status response: 200 OK
+
+Response body: 
+
+{
+    "contactId": 1338,
+    "firstName": "Albert",
+    "lastName": "Einstein",
+    "company": "Scientist",
+    "phone": "999-9999",
+    "email": "aeinstein@genius.org"
+}
+
+5.) Delete a Contact:
+
+HTTP Method: DELETE
+URL: https://tsg-contactlist.herokuapp.com/contact/1338
+Request Body: None
+Response Body: None
+
+Test results:
+
+Status response: 200 OK
+
+Response body: None
+
+Verified with Get All endpoint that the recond with id 1338 was deleted.
+
+ 
+
