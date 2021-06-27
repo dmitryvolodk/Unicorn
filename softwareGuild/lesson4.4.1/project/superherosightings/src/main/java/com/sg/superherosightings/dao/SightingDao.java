@@ -14,4 +14,7 @@ public interface SightingDao {
     
     // The system must be able to report all sightings (hero and location) for a particular date.
     List<Sighting> getSightingsForDate(LocalDate date);
+    
+    // Get 10 most recent sightings
+    List<Sighting> getTenMostRecentSightings();
 }

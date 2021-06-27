@@ -110,6 +110,9 @@ public class HeroDaoDB implements HeroDao{
         final String DELETE_HERO_ORGANIZATION = "DELETE FROM hero_organization WHERE heroId = ?";
         jdbc.update(DELETE_HERO_ORGANIZATION, heroId);
         
+        final String DELETE_SIGHTING = "DELETE FROM sighting WHERE heroId = ?";
+        jdbc.update(DELETE_SIGHTING, heroId);
+        
         final String DELETE_HERO = "DELETE FROM hero WHERE heroId = ?";
         jdbc.update(DELETE_HERO, heroId);
     }

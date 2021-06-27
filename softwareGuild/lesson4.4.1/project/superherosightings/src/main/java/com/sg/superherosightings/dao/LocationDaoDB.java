@@ -21,7 +21,7 @@ public class LocationDaoDB implements LocationDao {
     @Override
     public Location getLocationById(int locationId) {
         try {
-            final String SELECT_LOCATION_BY_ID = "SELECT * FROM location WHERE id = ?";
+            final String SELECT_LOCATION_BY_ID = "SELECT * FROM location WHERE locationId = ?";
             return jdbc.queryForObject(SELECT_LOCATION_BY_ID, new LocationMapper(), locationId);
         } catch (DataAccessException ex) {
             return null;
@@ -54,7 +54,7 @@ public class LocationDaoDB implements LocationDao {
     @Override
     public void updateLocation(Location location) {
         final String UPDATE_LOCATION = "UPDATE location SET locationName = ?, locationDescription = ?, locationAddress = ?, latitude = ?, longitude = ? "
-                + "WHERE id = ?";
+                + "WHERE locationId = ?";
         jdbc.update(UPDATE_LOCATION,
                 location.getLocationName(),
                 location.getLocationDescription(),
