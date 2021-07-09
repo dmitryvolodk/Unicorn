@@ -106,8 +106,8 @@ public class SightingDaoDBTest {
         Sighting sighting = new Sighting();
         sighting.setHero(hero);
         sighting.setLocation(location);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
-        LocalDate localDateSighting = LocalDate.parse("01-01-1999", formatter);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate localDateSighting = LocalDate.parse("1999-01-01", formatter);
         sighting.setDate(localDateSighting);
         sighting = sightingDao.addSighting(sighting);
 
@@ -155,15 +155,15 @@ public class SightingDaoDBTest {
         Sighting sighting = new Sighting();
         sighting.setHero(hero);
         sighting.setLocation(location);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
-        LocalDate localDateSighting = LocalDate.parse("01-01-1999", formatter);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate localDateSighting = LocalDate.parse("1999-01-01", formatter);
         sighting.setDate(localDateSighting);
         sighting = sightingDao.addSighting(sighting);
 
         Sighting sighting2 = new Sighting();
         sighting2.setHero(hero);
         sighting2.setLocation(location);
-        LocalDate localDateSighting2 = LocalDate.parse("02-01-1999", formatter);
+        LocalDate localDateSighting2 = LocalDate.parse("1999-02-01", formatter);
         sighting2.setDate(localDateSighting2);
         sighting2 = sightingDao.addSighting(sighting2);
 
@@ -211,15 +211,15 @@ public class SightingDaoDBTest {
         Sighting sighting = new Sighting();
         sighting.setHero(hero);
         sighting.setLocation(location);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
-        LocalDate localDateSighting = LocalDate.parse("01-01-1999", formatter);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate localDateSighting = LocalDate.parse("1999-01-01", formatter);
         sighting.setDate(localDateSighting);
         sighting = sightingDao.addSighting(sighting);
 
         Sighting fromDao = sightingDao.getSightingById(sighting.getSightingId());
         assertEquals(sighting, fromDao);
 
-        LocalDate localDateSighting2 = LocalDate.parse("02-02-2000", formatter);
+        LocalDate localDateSighting2 = LocalDate.parse("2000-02-02", formatter);
         sighting.setDate(localDateSighting2);
         sighting = sightingDao.addSighting(sighting);
 
@@ -269,8 +269,8 @@ public class SightingDaoDBTest {
         Sighting sighting = new Sighting();
         sighting.setHero(hero);
         sighting.setLocation(location);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
-        LocalDate localDateSighting = LocalDate.parse("01-01-1999", formatter);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate localDateSighting = LocalDate.parse("1999-01-01", formatter);
         sighting.setDate(localDateSighting);
         sighting = sightingDao.addSighting(sighting);
 
@@ -337,26 +337,26 @@ public class SightingDaoDBTest {
         Sighting sighting = new Sighting();
         sighting.setHero(hero);
         sighting.setLocation(location);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
-        LocalDate localDateSighting = LocalDate.parse("01-01-1999", formatter);        
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate localDateSighting = LocalDate.parse("1999-01-01", formatter);        
         sighting.setDate(localDateSighting);
         sighting = sightingDao.addSighting(sighting);
         
         Sighting sighting2 = new Sighting();
         sighting2.setHero(hero);
         sighting2.setLocation(location2);
-        LocalDate localDateSighting2 = LocalDate.parse("02-01-1999", formatter);        
+        LocalDate localDateSighting2 = LocalDate.parse("1999-02-01", formatter);        
         sighting2.setDate(localDateSighting2);
         sighting2 = sightingDao.addSighting(sighting2);
         
         Sighting sighting3 = new Sighting();
         sighting3.setHero(hero);
         sighting3.setLocation(location3);
-        LocalDate localDateSighting3 = LocalDate.parse("01-01-1999", formatter);        
+        LocalDate localDateSighting3 = LocalDate.parse("1999-01-01", formatter);        
         sighting3.setDate(localDateSighting3);
         sighting3 = sightingDao.addSighting(sighting3);
         
-        LocalDate date = LocalDate.parse("01-01-1999", formatter);
+        LocalDate date = LocalDate.parse("1999-01-01", formatter);
         List<Sighting> sightings = sightingDao.getSightingsForDate(date);
         
         assertEquals(2, sightings.size());
@@ -403,106 +403,106 @@ public class SightingDaoDBTest {
         Sighting sighting = new Sighting();
         sighting.setHero(hero);
         sighting.setLocation(location);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
-        LocalDate localDateSighting = LocalDate.parse("01-01-1999", formatter);        
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate localDateSighting = LocalDate.parse("1999-01-01", formatter);        
         sighting.setDate(localDateSighting);
         sighting = sightingDao.addSighting(sighting);
         
         Sighting sighting2 = new Sighting();
         sighting2.setHero(hero);
         sighting2.setLocation(location);
-        LocalDate localDateSighting2 = LocalDate.parse("01-02-1999", formatter);        
+        LocalDate localDateSighting2 = LocalDate.parse("1999-01-02", formatter);        
         sighting2.setDate(localDateSighting2);
         sighting2 = sightingDao.addSighting(sighting2);
         
         Sighting sighting3 = new Sighting();
         sighting3.setHero(hero);
         sighting3.setLocation(location);
-        LocalDate localDateSighting3 = LocalDate.parse("01-03-1999", formatter);        
+        LocalDate localDateSighting3 = LocalDate.parse("1999-01-03", formatter);        
         sighting3.setDate(localDateSighting3);
         sighting3 = sightingDao.addSighting(sighting3);
         
         Sighting sighting4 = new Sighting();
         sighting4.setHero(hero);
         sighting4.setLocation(location);
-        LocalDate localDateSighting4 = LocalDate.parse("01-04-1999", formatter);        
+        LocalDate localDateSighting4 = LocalDate.parse("1999-01-04", formatter);        
         sighting4.setDate(localDateSighting4);
         sighting4 = sightingDao.addSighting(sighting4);
         
         Sighting sighting5 = new Sighting();
         sighting5.setHero(hero);
         sighting5.setLocation(location);
-        LocalDate localDateSighting5 = LocalDate.parse("01-05-1999", formatter);        
+        LocalDate localDateSighting5 = LocalDate.parse("1999-01-05", formatter);        
         sighting5.setDate(localDateSighting5);
         sighting5 = sightingDao.addSighting(sighting5);
         
         Sighting sighting6 = new Sighting();
         sighting6.setHero(hero);
         sighting6.setLocation(location);
-        LocalDate localDateSighting6 = LocalDate.parse("01-06-1999", formatter);        
+        LocalDate localDateSighting6 = LocalDate.parse("1999-01-06", formatter);        
         sighting6.setDate(localDateSighting6);
         sighting6 = sightingDao.addSighting(sighting6);
         
         Sighting sighting7 = new Sighting();
         sighting7.setHero(hero);
         sighting7.setLocation(location);
-        LocalDate localDateSighting7 = LocalDate.parse("01-07-1999", formatter);        
+        LocalDate localDateSighting7 = LocalDate.parse("1999-01-07", formatter);        
         sighting7.setDate(localDateSighting7);
         sighting7 = sightingDao.addSighting(sighting7);
         
         Sighting sighting8 = new Sighting();
         sighting8.setHero(hero);
         sighting8.setLocation(location);
-        LocalDate localDateSighting8 = LocalDate.parse("01-08-1999", formatter);        
+        LocalDate localDateSighting8 = LocalDate.parse("1999-01-08", formatter);        
         sighting8.setDate(localDateSighting8);
         sighting8 = sightingDao.addSighting(sighting8);
         
         Sighting sighting9 = new Sighting();
         sighting9.setHero(hero);
         sighting9.setLocation(location);
-        LocalDate localDateSighting9 = LocalDate.parse("01-09-1999", formatter);        
+        LocalDate localDateSighting9 = LocalDate.parse("1999-01-09", formatter);        
         sighting9.setDate(localDateSighting9);
         sighting9 = sightingDao.addSighting(sighting9);
         
         Sighting sighting10 = new Sighting();
         sighting10.setHero(hero);
         sighting10.setLocation(location);
-        LocalDate localDateSighting10 = LocalDate.parse("01-10-1999", formatter);        
+        LocalDate localDateSighting10 = LocalDate.parse("1999-01-10", formatter);        
         sighting10.setDate(localDateSighting10);
         sighting10 = sightingDao.addSighting(sighting10);
         
         Sighting sighting11 = new Sighting();
         sighting11.setHero(hero);
         sighting11.setLocation(location);
-        LocalDate localDateSighting11 = LocalDate.parse("01-11-1999", formatter);        
+        LocalDate localDateSighting11 = LocalDate.parse("1999-01-11", formatter);        
         sighting11.setDate(localDateSighting11);
         sighting11 = sightingDao.addSighting(sighting11);
         
         Sighting sighting12 = new Sighting();
         sighting12.setHero(hero);
         sighting12.setLocation(location);
-        LocalDate localDateSighting12 = LocalDate.parse("01-12-1999", formatter);        
+        LocalDate localDateSighting12 = LocalDate.parse("1999-01-12", formatter);        
         sighting12.setDate(localDateSighting12);
         sighting12 = sightingDao.addSighting(sighting12);
         
         Sighting sighting13 = new Sighting();
         sighting13.setHero(hero);
         sighting13.setLocation(location);
-        LocalDate localDateSighting13 = LocalDate.parse("01-13-1999", formatter);        
+        LocalDate localDateSighting13 = LocalDate.parse("1999-01-13", formatter);        
         sighting13.setDate(localDateSighting13);
         sighting13 = sightingDao.addSighting(sighting13);
         
         Sighting sighting14 = new Sighting();
         sighting14.setHero(hero);
         sighting14.setLocation(location);
-        LocalDate localDateSighting14 = LocalDate.parse("01-14-1999", formatter);        
+        LocalDate localDateSighting14 = LocalDate.parse("1999-01-14", formatter);        
         sighting14.setDate(localDateSighting14);
         sighting14 = sightingDao.addSighting(sighting14);
         
         Sighting sighting15 = new Sighting();
         sighting15.setHero(hero);
         sighting15.setLocation(location);
-        LocalDate localDateSighting15 = LocalDate.parse("01-15-1999", formatter);        
+        LocalDate localDateSighting15 = LocalDate.parse("1999-01-15", formatter);        
         sighting15.setDate(localDateSighting15);
         sighting15 = sightingDao.addSighting(sighting15);
         
