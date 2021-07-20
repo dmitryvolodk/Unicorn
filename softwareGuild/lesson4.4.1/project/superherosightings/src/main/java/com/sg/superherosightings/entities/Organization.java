@@ -1,11 +1,20 @@
 package com.sg.superherosightings.entities;
 
 import java.util.Objects;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 public class Organization {
     private int organizationId;
+    
+    @NotBlank(message = "Organization name must not be empty.")
+    @Size(max = 100, message = "Organization name must be less than 100 characters.")
     private String organizationName;
+    
+    @Size(max = 256, message = "Organization description must be less than 256 characters.")
     private String organizationDescription;
+    
+    @Size(max = 256, message = "Organization contact info must be less than 256 characters.")
     private String organizationContactInfo;
 
     public int getOrganizationId() {

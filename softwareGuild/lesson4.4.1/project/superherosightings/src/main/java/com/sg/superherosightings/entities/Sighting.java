@@ -2,11 +2,14 @@ package com.sg.superherosightings.entities;
 
 import java.time.LocalDate;
 import java.util.Objects;
+import javax.validation.constraints.NotNull;
 
 public class Sighting {
     private int sightingId;
     private Hero hero;
     private Location location;
+    
+    @NotNull(message = "Date must not be empty.")
     private LocalDate date;
 
     public int getSightingId() {

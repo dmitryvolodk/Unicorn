@@ -17,6 +17,8 @@ public interface HeroDao {
     
     // The system must be able to report all of the members of a particular organization.
     List<Hero> getHeroesForOrganization(Organization organization);
+    
+    void updatePhotoName(Hero hero);
 }
 
 

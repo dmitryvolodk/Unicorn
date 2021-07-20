@@ -1,13 +1,26 @@
 package com.sg.superherosightings.entities;
 
 import java.util.Objects;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 public class Location {
     private int locationId;
+    
+    @NotBlank(message = "Location name must not be empty.")
+    @Size(max = 100, message = "Location name must be less than 100 characters.")
     private String locationName;
+    
+    @Size(max = 256, message = "Location description must be less than 256 characters.")
     private String locationDescription;
+    
+    @Size(max = 256, message = "Location address must be less than 256 characters.")
     private String locationAddress;
+    
+    @Size(max = 50, message = "Latitude must be less than 50 characters.")
     private String latitude;
+    
+    @Size(max = 50, message = "Longitude must be less than 50 characters.")
     private String longitude;
 
     public int getLocationId() {

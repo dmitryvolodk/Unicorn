@@ -20,24 +20,33 @@
             </div>
             
             <div class="row m-4 border border-dark">
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
+                    <a href="index" class="btn btn-outline-primary btn-lg">Home</a>
+                </div>
+                <div class="col text-center m-2">
                     <a href="superpowers" class="btn btn-outline-primary btn-lg">Superpowers</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="organizations" class="btn btn-outline-primary btn-lg">Organizations</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="heroes" class="btn btn-outline-primary btn-lg">Heroes</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="locations" class="btn btn-outline-primary btn-lg">Locations</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="sightings" class="btn btn-outline-primary btn-lg">Sightings</a>
                 </div>
             </div>
             
             <div class="row m-4 border border-dark">
+                <div class="col-12 m-1 text-center" 
+                     th:if="${!errors.isEmpty()}">
+                    <p class="alert alert-danger" th:each="error : ${errors}" 
+                       th:text="${error.message}">Error message</p>
+                </div>
+
                 <div class="col-3 text-center m-3">
                     <span class="h3">Add Sighting</span>
                 </div>
@@ -60,7 +69,7 @@
                                 Hero</label>
                             <div class="col-9">
                                 <select id="hero" name="heroId" class="form-control" >
-                                    <option th:each="hero : ${heros}" 
+                                    <option th:each="hero : ${heroes}" 
                                             th:value="${hero.heroId}" 
                                             th:text="${hero.heroName}">
                                         Hero Name</option>
@@ -71,11 +80,30 @@
                             <label for="date" class="col-3 col-form-label">
                                 Date</label>
                             <div class="col-9">
-                                <input type="text" name="date" 
+                                <input type="date" name="date"
                                        id="date" class="form-control"/>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Add Sighting</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="row m-4 border border-dark">
+                <div class="col-3 text-center m-3">
+                    <span class="h3">Get Sightings</span>
+                </div>
+                <div class="col-7 text-center m-3">
+                    <form action="sightingsDate" method="GET">
+                        <div class="form-group row">
+                            <label for="date" class="col-3 col-form-label">
+                                Date</label>
+                            <div class="col-9">
+                                <input type="date" name="date"
+                                       id="date" class="form-control"/>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Get Sightings</button>
                     </form>
                 </div>
             </div>

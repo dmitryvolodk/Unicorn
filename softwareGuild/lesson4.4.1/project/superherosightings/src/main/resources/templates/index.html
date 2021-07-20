@@ -8,7 +8,47 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+        <link href="styles/superheroSightingsStyles.css" rel="stylesheet" type="text/css" />
+
         <title>Superhero Sightings</title>
+
+        <script th:inline="javascript">
+            /*<![CDATA[*/
+
+            // Initialize and add the map
+            function initMap() {
+
+                // The location places
+                const places = [];
+                const placesSize = /*[[${#lists.size(tenSightings)}]]*/ 1;
+                places[0] = {lat: parseFloat(/*[[${tenSightings.get(0).location.latitude}]]*/ 42.35526), lng: parseFloat(/*[[${tenSightings.get(0).location.longitude}]]*/ -71.0657)};
+                places[1] = {lat: parseFloat(/*[[${tenSightings.get(1).location.latitude}]]*/ 42.35526), lng: parseFloat(/*[[${tenSightings.get(1).location.longitude}]]*/ -71.0657)};
+                places[2] = {lat: parseFloat(/*[[${tenSightings.get(2).location.latitude}]]*/ 42.35526), lng: parseFloat(/*[[${tenSightings.get(2).location.longitude}]]*/ -71.0657)};
+                places[3] = {lat: parseFloat(/*[[${tenSightings.get(3).location.latitude}]]*/ 42.35526), lng: parseFloat(/*[[${tenSightings.get(3).location.longitude}]]*/ -71.0657)};
+                places[4] = {lat: parseFloat(/*[[${tenSightings.get(4).location.latitude}]]*/ 42.35526), lng: parseFloat(/*[[${tenSightings.get(4).location.longitude}]]*/ -71.0657)};
+                places[5] = {lat: parseFloat(/*[[${tenSightings.get(5).location.latitude}]]*/ 42.35526), lng: parseFloat(/*[[${tenSightings.get(5).location.longitude}]]*/ -71.0657)};
+                places[6] = {lat: parseFloat(/*[[${tenSightings.get(6).location.latitude}]]*/ 42.35526), lng: parseFloat(/*[[${tenSightings.get(6).location.longitude}]]*/ -71.0657)};
+                places[7] = {lat: parseFloat(/*[[${tenSightings.get(7).location.latitude}]]*/ 42.35526), lng: parseFloat(/*[[${tenSightings.get(7).location.longitude}]]*/ -71.0657)};
+                places[8] = {lat: parseFloat(/*[[${tenSightings.get(8).location.latitude}]]*/ 42.35526), lng: parseFloat(/*[[${tenSightings.get(8).location.longitude}]]*/ -71.0657)};
+                places[9] = {lat: parseFloat(/*[[${tenSightings.get(9).location.latitude}]]*/ 42.35526), lng: parseFloat(/*[[${tenSightings.get(9).location.longitude}]]*/ -71.0657)};
+
+                // The map, centered at the place
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 4,
+                    center: places[0],
+                });
+
+                // The marker, positioned at the place
+                for (let i = 0; i < placesSize; i++) {
+                    const marker = new google.maps.Marker({
+                        position: places[i],
+                        map: map,
+                    });
+                }
+            }
+            /*]]>*/
+
+        </script>    
     </head>
     <body>
         <!-- Main Body of Page -->
@@ -18,24 +58,290 @@
                     <h1><a href="/" class="text-dark">Superhero Sightings</a></h1>
                 </div>
             </div>
-            
+
             <div class="row m-4 border border-dark">
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
+                    <a href="index" class="btn btn-outline-primary btn-lg">Home</a>
+                </div>
+                <div class="col text-center m-2">
                     <a href="superpowers" class="btn btn-outline-primary btn-lg">Superpowers</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="organizations" class="btn btn-outline-primary btn-lg">Organizations</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="heroes" class="btn btn-outline-primary btn-lg">Heroes</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="locations" class="btn btn-outline-primary btn-lg">Locations</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="sightings" class="btn btn-outline-primary btn-lg">Sightings</a>
                 </div>
             </div>
+
+            <!-- Creating div row for the carousel block -->
+            <div class="row m-4 border border-dark">
+                <div class="col-lg-12">
+                    <!-- Creating div carousel for the news feed -->
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="col text-center">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Location</th>
+                                                <th>Hero</th>
+                                                <th>Date</th>
+                                                <th>Map</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td th:text="${tenSightings.get(0).sightingId}">Sighting ID</td>
+                                                <td th:text='${tenSightings.get(0).location.locationName}'>Location Name</td>
+                                                <td th:text="${tenSightings.get(0).hero.heroName}">Hero Name</td>
+                                                <td th:text="${tenSightings.get(0).date}">Date</td>
+                                                <td><p>Map</p></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="col text-center">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Location</th>
+                                                <th>Hero</th>
+                                                <th>Date</th>
+                                                <th>Map</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td th:text="${tenSightings.get(1).sightingId}">Sighting ID</td>
+                                                <td th:text='${tenSightings.get(1).location.locationName}'>Location Name</td>
+                                                <td th:text="${tenSightings.get(1).hero.heroName}">Hero Name</td>
+                                                <td th:text="${tenSightings.get(1).date}">Date</td>
+                                                <td><p>Map</p></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="col text-center">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Location</th>
+                                                <th>Hero</th>
+                                                <th>Date</th>
+                                                <th>Map</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td th:text="${tenSightings.get(2).sightingId}">Sighting ID</td>
+                                                <td th:text='${tenSightings.get(2).location.locationName}'>Location Name</td>
+                                                <td th:text="${tenSightings.get(2).hero.heroName}">Hero Name</td>
+                                                <td th:text="${tenSightings.get(2).date}">Date</td>
+                                                <td><p>Map</p></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="col text-center">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Location</th>
+                                                <th>Hero</th>
+                                                <th>Date</th>
+                                                <th>Map</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td th:text="${tenSightings.get(3).sightingId}">Sighting ID</td>
+                                                <td th:text='${tenSightings.get(3).location.locationName}'>Location Name</td>
+                                                <td th:text="${tenSightings.get(3).hero.heroName}">Hero Name</td>
+                                                <td th:text="${tenSightings.get(3).date}">Date</td>
+                                                <td><p>Map</p></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="col text-center">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Location</th>
+                                                <th>Hero</th>
+                                                <th>Date</th>
+                                                <th>Map</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td th:text="${tenSightings.get(4).sightingId}">Sighting ID</td>
+                                                <td th:text='${tenSightings.get(4).location.locationName}'>Location Name</td>
+                                                <td th:text="${tenSightings.get(4).hero.heroName}">Hero Name</td>
+                                                <td th:text="${tenSightings.get(4).date}">Date</td>
+                                                <td><p>Map</p></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="col text-center">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Location</th>
+                                                <th>Hero</th>
+                                                <th>Date</th>
+                                                <th>Map</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td th:text="${tenSightings.get(5).sightingId}">Sighting ID</td>
+                                                <td th:text='${tenSightings.get(5).location.locationName}'>Location Name</td>
+                                                <td th:text="${tenSightings.get(5).hero.heroName}">Hero Name</td>
+                                                <td th:text="${tenSightings.get(5).date}">Date</td>
+                                                <td><p>Map</p></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="col text-center">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Location</th>
+                                                <th>Hero</th>
+                                                <th>Date</th>
+                                                <th>Map</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td th:text="${tenSightings.get(6).sightingId}">Sighting ID</td>
+                                                <td th:text='${tenSightings.get(6).location.locationName}'>Location Name</td>
+                                                <td th:text="${tenSightings.get(6).hero.heroName}">Hero Name</td>
+                                                <td th:text="${tenSightings.get(6).date}">Date</td>
+                                                <td><p>Map</p></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="col text-center">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Location</th>
+                                                <th>Hero</th>
+                                                <th>Date</th>
+                                                <th>Map</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td th:text="${tenSightings.get(7).sightingId}">Sighting ID</td>
+                                                <td th:text='${tenSightings.get(7).location.locationName}'>Location Name</td>
+                                                <td th:text="${tenSightings.get(7).hero.heroName}">Hero Name</td>
+                                                <td th:text="${tenSightings.get(7).date}">Date</td>
+                                                <td><p>Map</p></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="col text-center">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Location</th>
+                                                <th>Hero</th>
+                                                <th>Date</th>
+                                                <th>Map</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td th:text="${tenSightings.get(8).sightingId}">Sighting ID</td>
+                                                <td th:text='${tenSightings.get(8).location.locationName}'>Location Name</td>
+                                                <td th:text="${tenSightings.get(8).hero.heroName}">Hero Name</td>
+                                                <td th:text="${tenSightings.get(8).date}">Date</td>
+                                                <td><p>Map</p></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="col text-center">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Location</th>
+                                                <th>Hero</th>
+                                                <th>Date</th>
+                                                <th>Map</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td th:text="${tenSightings.get(9).sightingId}">Sighting ID</td>
+                                                <td th:text='${tenSightings.get(9).location.locationName}'>Location Name</td>
+                                                <td th:text="${tenSightings.get(9).hero.heroName}">Hero Name</td>
+                                                <td th:text="${tenSightings.get(9).date}">Date</td>
+                                                <td><p>Map</p></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>			
+                </div>			
+            </div>  
+
+            <!--The div element for the map -->
+            <div id="map"></div>
         </div>
         <!-- End main body -->
 
@@ -44,5 +350,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVF81K1phe8B0ZkC72yW8EAd5wV14Gv8A&callback=initMap&libraries=&v=weekly" async></script>
     </body>
 </html>

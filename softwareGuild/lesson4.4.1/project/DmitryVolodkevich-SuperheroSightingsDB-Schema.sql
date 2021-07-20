@@ -29,6 +29,7 @@ CREATE TABLE hero(
     heroName VARCHAR(50) NOT NULL,
     heroDescription VARCHAR(256) NULL,
     superpowerId INT NOT NULL,
+    photoName VARCHAR(50) NULL,
     FOREIGN KEY (superpowerId) REFERENCES superpower(superpowerId)
 );
 

@@ -76,7 +76,7 @@ public class LocationDaoDB implements LocationDao {
 
     @Override
     public List<Location> getLocationsForHero(Hero hero) {
-        final String SELECT_LOCATIONS_FOR_HERO = "SELECT l.* FROM location l "
+        final String SELECT_LOCATIONS_FOR_HERO = "SELECT DISTINCT l.* FROM location l "
                 + "JOIN sighting s ON l.locationId = s.locationId WHERE s.heroId = ?";
         List<Location> locations = jdbc.query(SELECT_LOCATIONS_FOR_HERO, 
                 new LocationMapper(), hero.getHeroId());

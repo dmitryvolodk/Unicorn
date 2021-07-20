@@ -6,8 +6,13 @@ import com.sg.superherosightings.dao.OrganizationDao;
 import com.sg.superherosightings.dao.SightingDao;
 import com.sg.superherosightings.dao.SuperpowerDao;
 import com.sg.superherosightings.entities.Superpower;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.ConstraintViolation;
+import javax.validation.Validation;
+import javax.validation.Validator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +21,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class SuperpowerController {
+    
+    Set<ConstraintViolation<Superpower>> violations = new HashSet<>();
     
     @Autowired
     SuperpowerDao superpowerDao;
@@ -36,6 +43,7 @@ public class SuperpowerController {
     public String displaySuperpowers(Model model) {
         List<Superpower> superpowers = superpowerDao.getAllSuperpowers();
         model.addAttribute("superpowers", superpowers);
+        model.addAttribute("errors", violations);
         return "superpowers";
     }
     
@@ -46,7 +54,11 @@ public class SuperpowerController {
         Superpower superpower = new Superpower();
         superpower.setSuperpowerName(superpowerName);
         
-        superpowerDao.addSuperpower(superpower);
+        Validator validate = Validation.buildDefaultValidatorFactory().getValidator();
+        violations = validate.validate(superpower);
+        if(violations.isEmpty()){
+            superpowerDao.addSuperpower(superpower);
+        }
         
         return "redirect:/superpowers";
     }

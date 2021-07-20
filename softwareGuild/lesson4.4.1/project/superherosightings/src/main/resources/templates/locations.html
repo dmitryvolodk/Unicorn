@@ -20,24 +20,33 @@
             </div>
             
             <div class="row m-4 border border-dark">
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
+                    <a href="index" class="btn btn-outline-primary btn-lg">Home</a>
+                </div>
+                <div class="col text-center m-2">
                     <a href="superpowers" class="btn btn-outline-primary btn-lg">Superpowers</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="organizations" class="btn btn-outline-primary btn-lg">Organizations</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="heroes" class="btn btn-outline-primary btn-lg">Heroes</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="locations" class="btn btn-outline-primary btn-lg">Locations</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="sightings" class="btn btn-outline-primary btn-lg">Sightings</a>
                 </div>
             </div>
             
             <div class="row m-4 border border-dark">
+                <div class="col-12 m-1 text-center" 
+                     th:if="${!errors.isEmpty()}">
+                    <p class="alert alert-danger" th:each="error : ${errors}" 
+                       th:text="${error.message}">Error message</p>
+                </div>
+
                 <div class="col-3 text-center m-3">
                     <span class="h3">Add Location</span>
                 </div>
@@ -99,6 +108,7 @@
                                 <th>Location Address</th>
                                 <th>Latitude</th>
                                 <th>Longitude</th>
+                                <th>Heroes</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
@@ -111,6 +121,7 @@
                                 <td th:text="${location.locationAddress}">Location Address</td>
                                 <td th:text="${location.latitude}">Latitude</td>
                                 <td th:text="${location.longitude}">Longitude</td>
+                                <td><a href="#" th:href="@{/locationHeroes(locationId=${location.locationId})}">Get</a></td>
                                 <td><a href="#" th:href="@{/editLocation(locationId=${location.locationId})}">Edit</a></td>
                                 <td><a href="#" th:href="@{/deleteLocation(locationId=${location.locationId})}">Delete</a></td>
                             </tr>

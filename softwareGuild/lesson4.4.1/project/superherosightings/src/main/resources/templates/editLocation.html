@@ -18,25 +18,28 @@
                     <h1><a href="/" class="text-dark">Superhero Sightings</a></h1>
                 </div>
             </div>
-            
+
             <div class="row m-4 border border-dark">
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
+                    <a href="index" class="btn btn-outline-primary btn-lg">Home</a>
+                </div>
+                <div class="col text-center m-2">
                     <a href="superpowers" class="btn btn-outline-primary btn-lg">Superpowers</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="organizations" class="btn btn-outline-primary btn-lg">Organizations</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="heroes" class="btn btn-outline-primary btn-lg">Heroes</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="locations" class="btn btn-outline-primary btn-lg">Locations</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="sightings" class="btn btn-outline-primary btn-lg">Sightings</a>
                 </div>
             </div>
-            
+
             <div class="row m-4 border border-dark">
                 <div class="col-3 text-center m-3">
                     <span class="h3">Edit Location</span>
@@ -49,6 +52,10 @@
                             <div class="col-9">
                                 <input type="text" name="locationName" id="locationName" 
                                        class="form-control" th:value="${location.locationName}"/>
+                                <div th:if="${#fields.hasErrors('location.locationName')}">
+                                    <p th:each="error : ${#fields.errors('location.locationName')}" class="alert alert-danger"
+                                       th:text="${error}"> Bad location name </p>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -57,6 +64,10 @@
                             <div class="col-9">
                                 <input type="text" name="locationDescription" id="locationDescription" 
                                        class="form-control"  th:value="${location.locationDescription}"/>
+                                <div th:if="${#fields.hasErrors('location.locationDescription')}">
+                                    <p th:each="error : ${#fields.errors('location.locationDescription')}" class="alert alert-danger"
+                                       th:text="${error}"> Bad location description </p>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -65,6 +76,10 @@
                             <div class="col-9">
                                 <input type="text" name="locationAddress" id="locationAddress" 
                                        class="form-control"  th:value="${location.locationAddress}"/>
+                                <div th:if="${#fields.hasErrors('location.locationAddress')}">
+                                    <p th:each="error : ${#fields.errors('location.locationAddress')}" class="alert alert-danger"
+                                       th:text="${error}"> Bad location address </p>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -73,6 +88,10 @@
                             <div class="col-9">
                                 <input type="text" name="latitude" id="latitude" 
                                        class="form-control"  th:value="${location.latitude}"/>
+                                <div th:if="${#fields.hasErrors('location.latitude')}">
+                                    <p th:each="error : ${#fields.errors('location.latitude')}" class="alert alert-danger"
+                                       th:text="${error}"> Bad latitude </p>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -81,6 +100,10 @@
                             <div class="col-9">
                                 <input type="text" name="longitude" id="longitude" 
                                        class="form-control"  th:value="${location.longitude}"/>
+                                <div th:if="${#fields.hasErrors('location.longitude')}">
+                                    <p th:each="error : ${#fields.errors('location.longitude')}" class="alert alert-danger"
+                                       th:text="${error}"> Bad longitude </p>
+                                </div>
                             </div>
                         </div>
                         <input type="hidden" name="locationId" th:value="${location.locationId}"/>

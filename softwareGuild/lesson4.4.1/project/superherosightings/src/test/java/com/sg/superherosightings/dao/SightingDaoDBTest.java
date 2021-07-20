@@ -221,7 +221,7 @@ public class SightingDaoDBTest {
 
         LocalDate localDateSighting2 = LocalDate.parse("2000-02-02", formatter);
         sighting.setDate(localDateSighting2);
-        sighting = sightingDao.addSighting(sighting);
+        // sighting = sightingDao.addSighting(sighting);
 
         sightingDao.updateSighting(sighting);
 

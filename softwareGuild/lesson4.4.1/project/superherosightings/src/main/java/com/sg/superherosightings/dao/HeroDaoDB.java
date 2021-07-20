@@ -119,7 +119,7 @@ public class HeroDaoDB implements HeroDao{
 
     @Override
     public List<Hero> getHeroesAtLocation(Location location) {
-        final String SELECT_HEROES_AT_LOCATION = "SELECT h.* FROM hero h JOIN "
+        final String SELECT_HEROES_AT_LOCATION = "SELECT DISTINCT h.* FROM hero h JOIN "
                 + "sighting s ON s.heroId = h.heroId WHERE s.locationId = ?";
         List<Hero> heroes = jdbc.query(SELECT_HEROES_AT_LOCATION, 
                 new HeroMapper(), location.getLocationId());
@@ -129,12 +129,20 @@ public class HeroDaoDB implements HeroDao{
 
     @Override
     public List<Hero> getHeroesForOrganization(Organization organization) {
-        final String SELECT_HEROES_FOR_ORGANIZATION = "SELECT h.* FROM hero h JOIN "
+        final String SELECT_HEROES_FOR_ORGANIZATION = "SELECT DISTINCT h.* FROM hero h JOIN "
                 + "hero_organization ho ON ho.heroId = h.heroId WHERE ho.organizationId = ?";
         List<Hero> heroes = jdbc.query(SELECT_HEROES_FOR_ORGANIZATION, 
                 new HeroMapper(), organization.getOrganizationId());
         associateSuperpowerAndOrganizations(heroes);
         return heroes;
+    }
+
+    @Override
+    public void updatePhotoName(Hero hero) {
+               final String UPDATE_PHOTO = "UPDATE hero SET photoName = ? WHERE heroId = ?";
+        jdbc.update(UPDATE_PHOTO, 
+                hero.getPhotoName(), 
+                hero.getHeroId());
     }
     
     public static final class HeroMapper implements RowMapper<Hero> {
@@ -145,6 +153,7 @@ public class HeroDaoDB implements HeroDao{
             hero.setHeroId(rs.getInt("heroId"));
             hero.setHeroName(rs.getString("heroName"));
             hero.setHeroDescription(rs.getString("heroDescription"));
+            hero.setPhotoName(rs.getString("photoName"));
             return hero;
         }
         

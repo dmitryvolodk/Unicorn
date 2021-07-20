@@ -72,7 +72,7 @@ public class OrganizationDaoDB implements OrganizationDao{
 
     @Override
     public List<Organization> getOrganizationsForHero(Hero hero) {
-        final String SELECT_ORGANIZATIONS_FOR_HERO = "SELECT o.* FROM organization o "
+        final String SELECT_ORGANIZATIONS_FOR_HERO = "SELECT DISTINCT o.* FROM organization o "
                 + "JOIN hero_organization ho ON o.organizationId = ho.organizationId WHERE ho.heroId = ?";
         List<Organization> organizations = jdbc.query(SELECT_ORGANIZATIONS_FOR_HERO, 
                 new OrganizationMapper(), hero.getHeroId());

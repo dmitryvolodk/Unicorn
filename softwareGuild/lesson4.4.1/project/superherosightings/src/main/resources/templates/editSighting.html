@@ -20,19 +20,22 @@
             </div>
             
             <div class="row m-4 border border-dark">
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
+                    <a href="index" class="btn btn-outline-primary btn-lg">Home</a>
+                </div>
+                <div class="col text-center m-2">
                     <a href="superpowers" class="btn btn-outline-primary btn-lg">Superpowers</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="organizations" class="btn btn-outline-primary btn-lg">Organizations</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="heroes" class="btn btn-outline-primary btn-lg">Heroes</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="locations" class="btn btn-outline-primary btn-lg">Locations</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="sightings" class="btn btn-outline-primary btn-lg">Sightings</a>
                 </div>
             </div>
@@ -59,7 +62,7 @@
                             <label for="hero" class="col-3 col-form-label">Hero</label>
                             <div class="col-9">
                                 <select id="hero" name="heroId" class="form-control" >
-                                    <option th:each="hero : ${heros}" 
+                                    <option th:each="hero : ${heroes}" 
                                             th:value="${hero.heroId}" 
                                             th:text="${hero.heroName}"
                                             th:selected="${sighting.hero.heroId == hero.heroId}">
@@ -70,7 +73,7 @@
                         <div class="form-group row">
                             <label for="date" class="col-3 col-form-label">Date</label>
                             <div class="col-9">
-                                <input type="text" name="date" id="date" class="form-control"
+                                <input type="date" name="date" id="date" class="form-control"
                                        th:value="${sighting.date}"/>
                             </div>
                         </div>

@@ -20,24 +20,33 @@
             </div>
 
             <div class="row m-4 border border-dark">
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
+                    <a href="index" class="btn btn-outline-primary btn-lg">Home</a>
+                </div>
+                <div class="col text-center m-2">
                     <a href="superpowers" class="btn btn-outline-primary btn-lg">Superpowers</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="organizations" class="btn btn-outline-primary btn-lg">Organizations</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="heroes" class="btn btn-outline-primary btn-lg">Heroes</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="locations" class="btn btn-outline-primary btn-lg">Locations</a>
                 </div>
-                <div class="col text-center m-3">
+                <div class="col text-center m-2">
                     <a href="sightings" class="btn btn-outline-primary btn-lg">Sightings</a>
                 </div>
             </div>
 
             <div class="row m-4 border border-dark">
+                <div class="col-12 m-1 text-center" 
+                     th:if="${!errors.isEmpty()}">
+                    <p class="alert alert-danger" th:each="error : ${errors}" 
+                       th:text="${error.message}">Error message</p>
+                </div>
+
                 <div class="col-3 text-center m-3">
                     <span class="h3">Add Organization</span>
                 </div>
@@ -81,6 +90,7 @@
                                 <th>Organization Name</th>
                                 <th>Organization Description</th>
                                 <th>Organization Contact Info</th>
+                                <th>Heroes</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
@@ -91,6 +101,7 @@
                                 <td th:text="${organization.organizationName}">Organization Name</td>
                                 <td th:text="${organization.organizationDescription}">Organization Description</td>
                                 <td th:text="${organization.organizationContactInfo}">Organization Contact Info</td>
+                                <td><a href="#" th:href="@{/organizationHeroes(organizationId=${organization.organizationId})}">Get</a></td>
                                 <td><a href="#" th:href="@{/editOrganization(organizationId=${organization.organizationId})}">Edit</a></td>
                                 <td><a href="#" th:href="@{/deleteOrganization(organizationId=${organization.organizationId})}">Delete</a></td>
                             </tr>

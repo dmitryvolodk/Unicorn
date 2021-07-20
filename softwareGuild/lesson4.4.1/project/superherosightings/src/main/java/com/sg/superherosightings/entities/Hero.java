@@ -2,12 +2,26 @@ package com.sg.superherosightings.entities;
 
 import java.util.List;
 import java.util.Objects;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 public class Hero {
     private int heroId;
+    
+    @NotBlank(message = "Hero name must not be empty.")
+    @Size(max = 50, message = "Hero name must be less than 50 characters.")
     private String heroName;
+    
+    @Size(max = 256, message = "Hero description must be less than 256 characters.")
     private String heroDescription;
+    
     private Superpower superpower;
+    
+    @Size(max = 50, message = "Photo name must be less than 50 characters.")
+    private String photoName;
+    
+    @NotNull(message = "Organizations must not be empty.")
     private List<Organization> organizations;
 
     public int getHeroId() {
@@ -42,6 +56,14 @@ public class Hero {
         this.superpower = superpower;
     }
 
+    public String getPhotoName() {
+        return photoName;
+    }
+
+    public void setPhotoName(String photoName) {
+        this.photoName = photoName;
+    }
+
     public List<Organization> getOrganizations() {
         return organizations;
     }
@@ -52,12 +74,13 @@ public class Hero {
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 29 * hash + this.heroId;
-        hash = 29 * hash + Objects.hashCode(this.heroName);
-        hash = 29 * hash + Objects.hashCode(this.heroDescription);
-        hash = 29 * hash + Objects.hashCode(this.superpower);
-        hash = 29 * hash + Objects.hashCode(this.organizations);
+        int hash = 7;
+        hash = 79 * hash + this.heroId;
+        hash = 79 * hash + Objects.hashCode(this.heroName);
+        hash = 79 * hash + Objects.hashCode(this.heroDescription);
+        hash = 79 * hash + Objects.hashCode(this.superpower);
+        hash = 79 * hash + Objects.hashCode(this.photoName);
+        hash = 79 * hash + Objects.hashCode(this.organizations);
         return hash;
     }
 
@@ -80,6 +103,9 @@ public class Hero {
             return false;
         }
         if (!Objects.equals(this.heroDescription, other.heroDescription)) {
+            return false;
+        }
+        if (!Objects.equals(this.photoName, other.photoName)) {
             return false;
         }
         if (!Objects.equals(this.superpower, other.superpower)) {
